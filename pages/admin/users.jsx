@@ -54,11 +54,13 @@ export default function Users() {
         }
     };
 
+
     const updateData = async () => {
         const updatedData = await axios.get(`${ENDPOINT}/api/users`);
         console.log(updatedData.data);
         setUsers(updateData.data);
     };
+
 
     return (
         <>
@@ -128,44 +130,3 @@ export default function Users() {
     );
 }
 
-// {
-//   "id": {
-//     "S": ""
-//   },
-//   "brand": {
-//     "S": ""
-//   },
-//   "model": {
-//     "S": ""
-//   },
-//   "category": {
-//     "S": ""
-//   },
-//   "licensePlate": {
-//     "S": ""
-//   },
-//   "image": {
-//     "S": ""
-//   },
-//   "priceperday": {
-//     "S": ""
-//   },
-//   "passengers": {
-//     "S": ""
-//   },
-//   "doors": {
-//     "S": ""
-//   },
-//   "km": {
-//     "N": ""
-//   },
-//   "consumption": {
-//     "S": ""
-//   },
-//   "transmission": {
-//     "S": ""
-//   },
-//   "location": {
-//     "L": []
-//   }
-// }
